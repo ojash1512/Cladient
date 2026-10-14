@@ -1,0 +1,114 @@
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-popup-container {
+    width: min(90vw, 380px);
+    color: #333;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: popupFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popupFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+}
+
+.login-popup-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.login-popup-title img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+.login-popup-title img:hover {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1.5px solid #e2e8f0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: #ff523b;
+    box-shadow: 0 0 0 3px rgba(255, 82, 59, 0.15);
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(135deg, #ff523b, #ff7b54);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(255, 82, 59, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-popup-container button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 82, 59, 0.45);
+}
+
+.login-switch {
+    font-size: 14px;
+    color: #64748b;
+    text-align: center;
+}
+
+.login-switch span {
+    color: #ff523b;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 4px;
+}

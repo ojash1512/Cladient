@@ -1,0 +1,301 @@
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.02);
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    color: #475569;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-menu li a {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #0f172a;
+}
+
+.navbar-menu li.active a {
+    color: #ff523b;
+    font-weight: 600;
+}
+
+.navbar-menu li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: #ff523b;
+    border-radius: 2px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search container */
+.navbar-search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-search-field {
+    width: 220px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: 1.5px solid #ff523b;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 8px;
+    animation: fadeIn 0.2s ease;
+    background: #fff;
+}
+
+.navbar-search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-search-btn:hover {
+    background-color: #f1f5f9;
+}
+
+.navbar-search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Basket icon with counter badge */
+.navbar-basket-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-basket-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.navbar-basket-icon:hover img {
+    transform: scale(1.1);
+}
+
+.navbar-cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 4px;
+    background-color: #ff523b;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(255, 82, 59, 0.4);
+}
+
+/* User profile & buttons */
+.navbar-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-user-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.navbar-user-pill .user-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.navbar-user-pill .user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.signout-btn {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.signout-btn:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+.navbar-auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signin-btn {
+    background: transparent;
+    border: 1.5px solid #ff523b;
+    color: #ff523b;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.signin-btn:hover {
+    background-color: #fff4f2;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #ff523b, #ff7b54);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 82, 59, 0.3);
+    transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 82, 59, 0.4);
+}
+
+/* Mobile hamburger */
+.mobile-hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+}
+
+.mobile-hamburger-btn .bar {
+    width: 22px;
+    height: 2px;
+    background: #334155;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    .navbar-search-field {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-hamburger-btn {
+        display: flex;
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 16px 16px;
+    }
+
+    .navbar-menu.mobile-open {
+        display: flex;
+    }
+
+    .navbar-search-field {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 240px;
+        margin-top: 10px;
+    }
+}

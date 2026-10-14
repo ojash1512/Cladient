@@ -1,0 +1,95 @@
+.header {
+    height: 34vw;
+    min-height: 340px;
+    margin: 30px auto;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0.1) 100%), url('../../assets/header_img.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4vw;
+    max-width: 55%;
+    bottom: 12%;
+    left: 5vw;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.header-contents h2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: max(3.5vw, 26px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-contents p {
+    color: #f1f5f9;
+    font-size: max(1vw, 13px);
+    line-height: 1.5;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-contents button {
+    border: none;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    font-size: max(1vw, 14px);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+}
+
+.header-contents button:hover {
+    transform: translateY(-2px);
+    background-color: #ff523b;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(255, 82, 59, 0.4);
+}
+
+/* Media Query */
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 280px;
+        min-height: 280px;
+        border-radius: 16px;
+    }
+
+    .header-contents {
+        max-width: 85%;
+        left: 20px;
+        bottom: 24px;
+        gap: 12px;
+    }
+
+    .header-contents p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 13px;
+    }
+
+    .header-contents button {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+}
